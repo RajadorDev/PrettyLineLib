@@ -1,0 +1,34 @@
+<?php
+
+declare (strict_types=1);
+ 
+/***
+ *   
+ * Rajador Developer
+ * 
+ * ▒█▀▀█ ░█▀▀█ ░░░▒█ ░█▀▀█ ▒█▀▀▄ ▒█▀▀▀█ ▒█▀▀█ 
+ * ▒█▄▄▀ ▒█▄▄█ ░▄░▒█ ▒█▄▄█ ▒█░▒█ ▒█░░▒█ ▒█▄▄▀ 
+ * ▒█░▒█ ▒█░▒█ ▒█▄▄█ ▒█░▒█ ▒█▄▄▀ ▒█▄▄▄█ ▒█░▒█
+ * 
+ * GitHub: https://github.com/rajadordev
+ * 
+ * Discord: rajadortv
+ * 
+ * 
+**/ 
+
+namespace prettyline\utils;
+
+use pocketmine\network\protocol\RemoveEntityPacket;
+use pocketmine\Player;
+
+trait DefaultEntityDespawnPacketsTrait 
+{
+
+    protected function sendDespawnPackets(Player $player) {
+        $packet = new RemoveEntityPacket();
+        $packet->eid = $this->getId();
+        $player->dataPacket($packet);
+    }
+    
+}

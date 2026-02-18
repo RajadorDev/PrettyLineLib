@@ -1,0 +1,10 @@
+---
+name: PrettyLineLib
+description: Biblioteca de linhas de texto para pocketmine 2
+author: Rajador
+discord: rajadortv
+api: 2.0.0
+depend: [SmartCommand, AutoPluginUpdater]
+version: 1.0.0
+main: 'prettyline\PrettyLinePlugin'
+...

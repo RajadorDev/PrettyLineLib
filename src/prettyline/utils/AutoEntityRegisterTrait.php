@@ -1,0 +1,32 @@
+<?php
+
+declare (strict_types=1);
+ 
+/***
+ *   
+ * Rajador Developer
+ * 
+ * ▒█▀▀█ ░█▀▀█ ░░░▒█ ░█▀▀█ ▒█▀▀▄ ▒█▀▀▀█ ▒█▀▀█ 
+ * ▒█▄▄▀ ▒█▄▄█ ░▄░▒█ ▒█▄▄█ ▒█░▒█ ▒█░░▒█ ▒█▄▄▀ 
+ * ▒█░▒█ ▒█░▒█ ▒█▄▄█ ▒█░▒█ ▒█▄▄▀ ▒█▄▄▄█ ▒█░▒█
+ * 
+ * GitHub: https://github.com/rajadordev
+ * 
+ * Discord: rajadortv
+ * 
+ * 
+**/ 
+
+namespace prettyline\utils;
+
+use pocketmine\entity\Entity;
+
+trait AutoEntityRegisterTrait 
+{
+
+    public static function registerSelf()
+    {
+        Entity::registerEntity(static::class, true);
+    }
+    
+}
