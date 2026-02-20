@@ -226,7 +226,7 @@ trait LineEntityHolderTrait
             } else if (isset($data[Player::DATA_NAMETAG])) {
                 $nametag = $this->getAditionalPlayerText($player, $data[Player::DATA_NAMETAG][1]);
                 $data[Player::DATA_NAMETAG][1] = $nametag;
-                parent::sendData($player, $nametag);
+                parent::sendData($player, $data);
             } else {
                 parent::sendData($player, $data);
             }
