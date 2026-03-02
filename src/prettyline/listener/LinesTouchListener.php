@@ -23,6 +23,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use prettyline\line\LinesMap;
 use pocketmine\network\protocol\InteractPacket;
+use pocketmine\network\protocol\p70\InteractPacket as P70InteractPacket;
 use prettyline\line\LineHolder;
 use prettyline\PrettyLinePlugin;
 use Throwable;
@@ -51,7 +52,7 @@ final class LinesTouchListener implements Listener
     {
         $packet = $event->getPacket();
         $player = $event->getPlayer();
-        if ($packet instanceof InteractPacket) {
+        if ($packet instanceof InteractPacket || $packet instanceof P70InteractPacket) {
             $entityRuntimeId = (int) $packet->target;
             $target = $player->getLevel()->getEntity($entityRuntimeId);
             try {
