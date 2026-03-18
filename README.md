@@ -21,6 +21,9 @@ This library is optimized and does not create more entities than necessary for t
 * SmartCommand: `This library depends on some utilities from SmartCommand and may use its command classes in the future`
   - `Download`: https://github.com/RajadorDev/SmartCommand/tree/pm-2.0.0
 
+* AutoPluginUpdater: `This plugin will update PrettyLineLib automatically when has some new version`
+  - `Download:`: https://github.com/RajadorDev/AutoPluginUpdater
+
 ## Documentation 📚
 
 Fist, you need to add PrettyLineLib as dependence of your plugin in `plugin.yml` file:
